@@ -32,6 +32,19 @@ jobs:
         run: |
           mkdir -p data
           python -u fetch_bodacc.py
+      - name: Chiffrer les coordonnées détaillées
+        env:
+          LOT_KEY: ${{ secrets.LOT_KEY }}
+        run: |
+          if [ -z "$LOT_KEY" ]; then
+            echo "Secret LOT_KEY absent : les détails ne sont pas publiés."
+            rm -f data/details-du-jour.enc
+          else
+            openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -in /tmp/details-du-jour.json \
+              -out data/details-du-jour.enc -pass env:LOT_KEY
+            echo "Détails chiffrés."
+          fi
+          rm -f /tmp/details-du-jour.json
       - name: Enregistrer le fichier
         if: always()
         run: |

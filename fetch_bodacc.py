@@ -12,6 +12,7 @@ pour qu'un même établissement ne revienne jamais deux fois.
 Lu ensuite par la tâche planifiée Claude « Veille prospects Nord ».
 """
 import json
+import os
 import re
 import time
 import urllib.parse
@@ -177,20 +178,66 @@ def candidat(annonce, aujourd_hui):
     }
 
 
+DOMICILE = re.compile(r"\b(apt|appartement|app\.?|r[ée]sidence|b[âa]t(iment)?|[ée]tage|logement)\b", re.I)
+
+
+def adresse_de(etab):
+    a = etab.get("adresse") or {}
+    if not isinstance(a, dict):
+        return ""
+    morceaux = [a.get("numeroVoie"), a.get("indiceRepetition"), a.get("typeVoie"), a.get("nomVoie"),
+                a.get("complGeographique"), a.get("codePostal"), a.get("ville")]
+    return " ".join(str(m) for m in morceaux if m)
+
+
+def dirigeants_de(annonce):
+    lp = champ_json(annonce.get("listepersonnes"))
+    if isinstance(lp, dict):
+        lp = lp.get("personne", lp)
+    personnes = lp if isinstance(lp, list) else [lp]
+    noms = []
+    for pers in personnes:
+        if not isinstance(pers, dict):
+            continue
+        if pers.get("administration"):
+            noms.append(str(pers["administration"])[:300])
+        elif pers.get("nom"):
+            prenom = pers.get("prenom") or ""
+            noms.append(f"{prenom} {pers['nom']}".strip())
+    return noms
+
+
+def details_de(annonce, fiche, info):
+    """Coordonnées professionnelles complètes, publiées uniquement sous forme chiffrée."""
+    etab = etablissement_de(annonce)
+    adresse = adresse_de(etab)
+    return {
+        "siren": fiche["siren"],
+        "denomination": annonce.get("commercant"),
+        "nom_complet_annuaire": (info or {}).get("nom_complet"),
+        "enseigne": fiche.get("enseigne"),
+        "dirigeants": dirigeants_de(annonce),
+        "adresse_etablissement": adresse,
+        "adresse_probablement_domicile": bool(DOMICILE.search(adresse)),
+        "annonce_bodacc": annonce.get("url_complete"),
+    }
+
+
 def main():
     aujourd_hui = date.today()
     brutes = annonces_bodacc()
     print(f"{len(brutes)} annonces BODACC récupérées")
     vus = lire_attribues()
-    fiches = {}
+    fiches, sources = {}, {}
     for a in brutes:
         c = candidat(a, aujourd_hui)
         if c and c["siren"] not in vus and c["siren"] not in fiches:
             fiches[c["siren"]] = c
+            sources[c["siren"]] = a
     print(f"{len(fiches)} candidats ciblés jamais attribués")
 
     lot = sorted(fiches.values(), key=lambda c: c["date_reference"], reverse=True)[:TAILLE_LOT]
-    echecs = 0
+    echecs, infos = 0, {}
     for c in lot:
         if echecs >= 5:
             break
@@ -198,6 +245,7 @@ def main():
         if err:
             echecs += 1
             continue
+        infos[c["siren"]] = info
         if info:
             if "NON-DIFFUSIBLE" in json.dumps(info).upper():
                 c["non_diffusible"] = True  # l'exploitant refuse la diffusion : jamais proposé
@@ -226,6 +274,14 @@ def main():
             "candidats": lot,
         }, f, ensure_ascii=False, indent=1)
     print(f"Lot du jour : {len(lot)} candidats ({len(fiches) - len(lot)} en réserve)")
+
+    # détails complets, jamais écrits dans le dépôt en clair : le workflow les chiffre
+    chemin = os.environ.get("DETAILS_PATH", "/tmp/details-du-jour.json")
+    with open(chemin, "w", encoding="utf-8") as f:
+        json.dump({"date_du_lot": jour,
+                   "details": [details_de(sources[c["siren"]], c, infos.get(c["siren"])) for c in lot]},
+                  f, ensure_ascii=False, indent=1)
+    print(f"Détails écrits dans {chemin}")
 
 
 if __name__ == "__main__":
