@@ -236,19 +236,26 @@ def main():
             sources[c["siren"]] = a
     print(f"{len(fiches)} candidats ciblés jamais attribués")
 
-    lot = sorted(fiches.values(), key=lambda c: c["date_reference"], reverse=True)[:TAILLE_LOT]
-    echecs, infos = 0, {}
-    for c in lot:
-        if echecs >= 5:
+    jour = aujourd_hui.isoformat()
+    lot, echecs, infos, essais = [], 0, {}, 0
+    for c in sorted(fiches.values(), key=lambda c: c["date_reference"], reverse=True):
+        if len(lot) >= TAILLE_LOT or essais >= 3 * TAILLE_LOT:
             break
+        if echecs >= 5:  # annuaire injoignable : on garde les candidats sans enrichissement
+            lot.append(c)
+            continue
+        essais += 1
         info, err = enrichir(c["siren"])
+        time.sleep(0.2)
         if err:
             echecs += 1
+            lot.append(c)
             continue
         infos[c["siren"]] = info
         if info:
-            if "NON-DIFFUSIBLE" in json.dumps(info).upper():
-                c["non_diffusible"] = True  # l'exploitant refuse la diffusion : jamais proposé
+            if "NON-DIFFUSIBLE" in json.dumps(info).upper() or info.get("etat") == "C":
+                # exploitant refusant la diffusion ou entreprise cessée : jamais proposé
+                vus[c["siren"]] = jour
                 continue
             c["naf"] = info["naf"]
             c["etat"] = info["etat"]
@@ -256,11 +263,8 @@ def main():
                 c["enseigne"] = info["enseignes"][0]
             if not c["entreprise_individuelle"] and not c["nom_societe"]:
                 c["nom_societe"] = info["nom_complet"]
-        time.sleep(0.2)
-    # écarte les entreprises cessées et celles dont l'exploitant refuse la diffusion
-    lot = [c for c in lot if c.get("etat") != "C" and not c.get("non_diffusible")]
+        lot.append(c)
 
-    jour = aujourd_hui.isoformat()
     for c in lot:
         vus[c["siren"]] = jour
     ecrire_attribues(vus)
