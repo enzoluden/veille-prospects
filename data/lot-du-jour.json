@@ -3,7 +3,7 @@
  "date_du_lot": "2026-10-28",
  "departement": "59",
  "candidats_restants": 83,
- "nombre": 25,
+ "nombre": 16,
  "candidats": [
   {
    "siren": "131673758",
@@ -31,20 +31,6 @@
    "entreprise_individuelle": true,
    "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602062335",
    "naf": "56.30Z",
-   "etat": "A"
-  },
-  {
-   "siren": "798640025",
-   "type": "creation",
-   "date_reference": "2026-11-02",
-   "ville": "Hondschoote",
-   "cp": "59122",
-   "activite": "Commerce de détail de bijoux fantaisie, d'accessoires de mode et vêtements, à domicile, sur les marchés et à distance.",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202601951111",
-   "naf": "32.13Z",
    "etat": "A"
   },
   {
@@ -102,20 +88,6 @@
    "etat": "A"
   },
   {
-   "siren": "312489859",
-   "type": "creation",
-   "date_reference": "2026-11-01",
-   "ville": "Dunkerque",
-   "cp": "59140",
-   "activite": "Vente de vins et d'appareils de chauffe au bois et pelle sur internet, foires et salons",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260204704",
-   "naf": "47.91B",
-   "etat": "A"
-  },
-  {
    "siren": "131514192",
    "type": "creation",
    "date_reference": "2026-11-01",
@@ -126,34 +98,6 @@
    "nom_societe": null,
    "entreprise_individuelle": true,
    "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602031751"
-  },
-  {
-   "siren": "131579179",
-   "type": "creation",
-   "date_reference": "2026-10-31",
-   "ville": "Rosult",
-   "cp": "59230",
-   "activite": "Location de Photobooth professionnel et par la suite bar à bonbons, château gonflable, pêche au canard, mange debout etc",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602062344",
-   "naf": "77.39Z",
-   "etat": "A"
-  },
-  {
-   "siren": "131264392",
-   "type": "creation",
-   "date_reference": "2026-10-30",
-   "ville": "Villeneuve-d'Ascq",
-   "cp": "59650",
-   "activite": "Vente de vêtements, objets du quotidien et bijoux fantaisie.",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260207609",
-   "naf": "47.91B",
-   "etat": "A"
   },
   {
    "siren": "130890528",
@@ -184,34 +128,6 @@
    "etat": "A"
   },
   {
-   "siren": "130503907",
-   "type": "creation",
-   "date_reference": "2026-10-23",
-   "ville": "Mouvaux",
-   "cp": "59420",
-   "activite": "Réception de repas cuisinés auprès des restaurants et/ou de courses alimentaires au supermarché afin de les livrer aux domiciles des particuliers.",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260204748",
-   "naf": "53.20Z",
-   "etat": "A"
-  },
-  {
-   "siren": "130589542",
-   "type": "creation",
-   "date_reference": "2026-10-23",
-   "ville": "Grande-Synthe",
-   "cp": "59760",
-   "activite": "Vente de vêtements homme femme enfant, accessoires de mode, chaussures, bijoux fantaisie, maroquinerie, cosmétiques, gâteaux, confiserie, tous articles divers et produits alimentaires non réglementés",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202601901154",
-   "naf": "47.82Z",
-   "etat": "A"
-  },
-  {
    "siren": "109497958",
    "type": "reprise",
    "date_reference": "2026-10-21",
@@ -223,34 +139,6 @@
    "entreprise_individuelle": true,
    "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602062355",
    "naf": "00.00Z",
-   "etat": "A"
-  },
-  {
-   "siren": "131161796",
-   "type": "creation",
-   "date_reference": "2026-10-21",
-   "ville": "Marcq-en-Barœul",
-   "cp": "59700",
-   "activite": "Vente au détail de vêtements et d'accessoires de prêt-à-porter sous marque propre, fabriqués par des sous-traitants, principalement en ligne.",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260204769",
-   "naf": "47.91B",
-   "etat": "A"
-  },
-  {
-   "siren": "109499616",
-   "type": "creation",
-   "date_reference": "2026-10-21",
-   "ville": "Maubeuge",
-   "cp": "59600",
-   "activite": "Vente de vêtements",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602001194",
-   "naf": "14.13Z",
    "etat": "A"
   },
   {
@@ -306,20 +194,6 @@
    "nom_societe": "MAISON OLAMIDE",
    "entreprise_individuelle": false,
    "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260197705"
-  },
-  {
-   "siren": "408618387",
-   "type": "creation",
-   "date_reference": "2026-10-17",
-   "ville": "Louvroil",
-   "cp": "59720",
-   "activite": "Rôtisserie ambulante sur les marchés et voies publiques : cuisson, préparation et vente à emporter de volailles, viandes rôties, plats préparés et accompagnements - Achat et revente au détail sur les marchés et voies publiques de produits alimentaires (gâteaux, pâtisseries, confiseries, boissons), d",
-   "enseigne": "[NON-DIFFUSIBLE]",
-   "nom_societe": null,
-   "entreprise_individuelle": true,
-   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A20260207565",
-   "naf": "47.81Z",
-   "etat": "A"
   },
   {
    "siren": "131683138",

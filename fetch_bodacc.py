@@ -199,6 +199,9 @@ def main():
             echecs += 1
             continue
         if info:
+            if "NON-DIFFUSIBLE" in json.dumps(info).upper():
+                c["non_diffusible"] = True  # l'exploitant refuse la diffusion : jamais proposé
+                continue
             c["naf"] = info["naf"]
             c["etat"] = info["etat"]
             if not c["enseigne"] and info["enseignes"]:
@@ -206,7 +209,8 @@ def main():
             if not c["entreprise_individuelle"] and not c["nom_societe"]:
                 c["nom_societe"] = info["nom_complet"]
         time.sleep(0.2)
-    lot = [c for c in lot if c.get("etat") != "C"]  # écarte les entreprises déjà cessées
+    # écarte les entreprises cessées et celles dont l'exploitant refuse la diffusion
+    lot = [c for c in lot if c.get("etat") != "C" and not c.get("non_diffusible")]
 
     jour = aujourd_hui.isoformat()
     for c in lot:
