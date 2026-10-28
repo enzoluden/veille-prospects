@@ -1,0 +1,43 @@
+name: Collecte BODACC Nord
+
+on:
+  schedule:
+    - cron: "7 5 * * 1-5"   # ~6h07 heure de Paris en hiver (7h07 en été), avant la tâche de 7h40
+  workflow_dispatch: {}      # lancement manuel possible depuis l'onglet Actions
+  push:                      # relance quand le robot lui-même est modifié
+    branches: [main]
+    paths: ["fetch_bodacc.py", ".github/workflows/**"]
+
+permissions:
+  contents: write
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Tester les connexions
+        continue-on-error: true
+        run: |
+          echo "--- BODACC ---"
+          curl -sS -m 20 -o /dev/null -w "HTTP %{http_code} en %{time_total}s\n" "https://bodacc-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/annonces-commerciales/records?limit=1" || echo "ECHEC BODACC"
+          echo "--- Recherche d'entreprises ---"
+          curl -sS -m 20 -o /dev/null -w "HTTP %{http_code} en %{time_total}s\n" "https://recherche-entreprises.api.gouv.fr/search?q=restaurant&per_page=1" || echo "ECHEC Recherche d'entreprises"
+      - name: Télécharger les annonces
+        timeout-minutes: 20
+        run: |
+          mkdir -p data
+          python -u fetch_bodacc.py
+      - name: Enregistrer le fichier
+        if: always()
+        run: |
+          git config user.name "veille-bot"
+          git config user.email "veille-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Collecte BODACC du $(date +%F)"
+          git pull --rebase -q || true
+          git push
