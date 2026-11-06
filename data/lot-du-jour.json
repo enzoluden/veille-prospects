@@ -1,8 +1,91 @@
 {
- "genere_le": "2026-11-05T06:04:08.356040+00:00",
- "date_du_lot": "2026-11-05",
+ "genere_le": "2026-11-06T05:59:55.655000+00:00",
+ "date_du_lot": "2026-11-06",
  "departement": "59",
- "candidats_restants": 1,
- "nombre": 0,
- "candidats": []
+ "candidats_restants": 4,
+ "nombre": 6,
+ "candidats": [
+  {
+   "siren": "131890931",
+   "type": "creation",
+   "date_reference": "2026-10-22",
+   "ville": "Mouvaux",
+   "cp": "59420",
+   "activite": "L'acquisition, par voie d'achat, d'apport ou autrement, la détention, l'administration, la restauration et/ou la construction de tous immeubles bâtis et/ou non bâtis, leur mise à disposition au bénéfice de tout ou partie des associés et/ou leur mise en location",
+   "enseigne": null,
+   "nom_societe": "Les peupliers de MARCQ",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131823",
+   "naf": "68.20B",
+   "etat": "A"
+  },
+  {
+   "siren": "131848129",
+   "type": "creation",
+   "date_reference": "2026-10-20",
+   "ville": "Lille",
+   "cp": "59000",
+   "activite": "Restauration rapide.",
+   "enseigne": null,
+   "nom_societe": "ATR FOOD",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131805",
+   "naf": "56.10C",
+   "etat": "A"
+  },
+  {
+   "siren": "131731937",
+   "type": "creation",
+   "date_reference": "2026-10-19",
+   "ville": "Wavrechain-sous-Denain",
+   "cp": "59220",
+   "activite": "Vente a distance de vêtements, d'accessoires textiles et d'articles personnalisés .",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131728"
+  },
+  {
+   "siren": "109347336",
+   "type": "reprise",
+   "date_reference": "2026-10-16",
+   "ville": "Pont-A-Vendin, Sainghin en Weppes",
+   "cp": "62880, 59184",
+   "activite": "Fonds de commerce de vente de véhicules d'occasion, ventes de pièces détachées, entretien et réparation de véhicules, la création, l'acquisition, la location, la prise en location gérance de tous fonds de commerce, usine, ateliers se rapportant à l'une ou l'autre des activités spécifiées.",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131743",
+   "naf": "45.20A",
+   "etat": "A"
+  },
+  {
+   "siren": "944550599",
+   "type": "creation",
+   "date_reference": "2026-10-10",
+   "ville": "Marquette-lez-Lille",
+   "cp": "59520",
+   "activite": "Fabrication artisanale de pâtisseries, gâteaux, biscuits, sablés, entremets, mignardises et produits de pâtisserie sur commande. - Vente de produits traiteur salés et sucrés, biscuits, sablés, entremets et mignardises, plats et produits alimentaires à emporter, prestations traiteur pour particuliers",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131790",
+   "naf": "68.20A",
+   "etat": "A"
+  },
+  {
+   "siren": "884104860",
+   "type": "creation",
+   "date_reference": "2026-10-08",
+   "ville": "Tourcoing",
+   "cp": "59200",
+   "activite": "Achat-vente de vêtements et accessoires non réglementés neufs sur internet.",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602131775",
+   "naf": "47.91B",
+   "etat": "A"
+  }
+ ]
 }
