@@ -1,8 +1,91 @@
 {
- "genere_le": "2026-11-10T05:56:11.648361+00:00",
- "date_du_lot": "2026-11-10",
+ "genere_le": "2026-11-11T06:02:29.053132+00:00",
+ "date_du_lot": "2026-11-11",
  "departement": "59",
- "candidats_restants": 0,
- "nombre": 0,
- "candidats": []
+ "candidats_restants": 1,
+ "nombre": 6,
+ "candidats": [
+  {
+   "siren": "101902997",
+   "type": "creation",
+   "date_reference": "2026-11-01",
+   "ville": "Tourcoing",
+   "cp": "59200",
+   "activite": "Achat et revente de vêtements, chaussures et accessoires non réglementés d'occasion et neufs auprès de particuliers et de professionnels commercialisés en ligne sur les sites internet de revente dédiés.",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162287",
+   "naf": "47.91B",
+   "etat": "A"
+  },
+  {
+   "siren": "132279795",
+   "type": "creation",
+   "date_reference": "2026-10-30",
+   "ville": "Bouvignies",
+   "cp": "59870",
+   "activite": "l'acquisition, par voie d'achat, d'apport ou autrement, la détention, l'administration, la restauration et/ou la construction de tous immeubles bâtis et/ou non bâtis, leur mise à disposition au bénéfice de tout ou partie des associés et/ou leur mise en location",
+   "enseigne": null,
+   "nom_societe": "MAJOV",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162350",
+   "naf": "68.20B",
+   "etat": "A"
+  },
+  {
+   "siren": "131428104",
+   "type": "creation",
+   "date_reference": "2026-10-24",
+   "ville": "Tourcoing",
+   "cp": "59200",
+   "activite": "Vente de vêtements de seconde main.",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162284",
+   "naf": "47.91B",
+   "etat": "A"
+  },
+  {
+   "siren": "132079757",
+   "type": "creation",
+   "date_reference": "2026-10-23",
+   "ville": "LOMME",
+   "cp": "59160",
+   "activite": "L'activité de primeur, commerce de détail et de gros en fruits et légumes, d'alimentation générale et produits alimentaires, de tous produits d'épicerie",
+   "enseigne": null,
+   "nom_societe": "TLB ONNAING",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162325",
+   "naf": "47.11B",
+   "etat": "A"
+  },
+  {
+   "siren": "935212852",
+   "type": "creation",
+   "date_reference": "2026-10-23",
+   "ville": "Guesnain",
+   "cp": "59287",
+   "activite": "le magnétiseur rééquilibre les énergies du corps à l'aide de ses propres énergies. il soulage les douleurs physiques et émotionnelles. vente au détail de produits divers par correspondance (boutique en ligne) et sur les marchés (activité ambulante)",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162338"
+  },
+  {
+   "siren": "131796914",
+   "type": "creation",
+   "date_reference": "2026-10-19",
+   "ville": "Orchies",
+   "cp": "59310",
+   "activite": "l'achat, la vente, le négoce, la distribution, l'importation et l'exportation de bijoux, d'articles de joaillerie, de bijouterie fantaisie, d'accessoires de mode et d'articles similaires, neufs ou d'occasion, par tous moyens, notamment en ligne, sur sites internet, places de marché et par correspond",
+   "enseigne": null,
+   "nom_societe": "L'ECRIN DES SECRETS",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602162348",
+   "naf": "46.48Z",
+   "etat": "A"
+  }
+ ]
 }
