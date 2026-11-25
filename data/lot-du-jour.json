@@ -1,8 +1,61 @@
 {
- "genere_le": "2026-11-24T06:04:21.441609+00:00",
- "date_du_lot": "2026-11-24",
+ "genere_le": "2026-11-25T06:03:21.214527+00:00",
+ "date_du_lot": "2026-11-25",
  "departement": "59",
  "candidats_restants": 0,
- "nombre": 0,
- "candidats": []
+ "nombre": 4,
+ "candidats": [
+  {
+   "siren": "131917858",
+   "type": "reprise",
+   "date_reference": "2026-11-12",
+   "ville": "Lille",
+   "cp": "59000",
+   "activite": "Fonds de commerce de débit de boissons, café, bar, pub, bar à thèmes, brasserie, lié à l'exploitation d'une licence de IVème catégorie",
+   "enseigne": "LA GARDERIE",
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602251327",
+   "naf": "00.00Z",
+   "etat": "A"
+  },
+  {
+   "siren": "132691585",
+   "type": "creation",
+   "date_reference": "2026-11-10",
+   "ville": "Fresnes-sur-Escaut",
+   "cp": "59970",
+   "activite": "Vente au détails de vêtements, bijoux, accessoires de mode et articles divers, neufs et occasion, a distance, notamment sur internet et les réseaux sociaux",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602251312"
+  },
+  {
+   "siren": "132294265",
+   "type": "creation",
+   "date_reference": "2026-11-09",
+   "ville": "Bondues",
+   "cp": "59910",
+   "activite": "L'acquisition, la propriété, la détention, le financement, la location, l'exploitation, la gestion, la mise à disposition, au profit de médecins, de professionnels de santé et de tous autres professionnels dûment habilités, de matériels, appareils, dispositifs et équipements technologiques destinés ",
+   "enseigne": null,
+   "nom_societe": "SAS SUDERMA GRAND NORD",
+   "entreprise_individuelle": false,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602251360"
+  },
+  {
+   "siren": "925046252",
+   "type": "reprise",
+   "date_reference": "2026-10-31",
+   "ville": "Dunkerque",
+   "cp": "59140",
+   "activite": "Un fonds de commerce de café, bar, brasserie avec vente de boissons alcoolisées et non alcoolisées, petite restauration sur place, organisation de soirées à thème avec exploitation de la française des jeux et PMU et toutes activités aannexes pouvant se rapporter à l'objet social.",
+   "enseigne": null,
+   "nom_societe": null,
+   "entreprise_individuelle": true,
+   "annonce_bodacc": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:A202602251300",
+   "naf": "56.30Z",
+   "etat": "A"
+  }
+ ]
 }
